@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.main > * {
+    margin: auto;
+}
+
+.title {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: none;
+}
+
+tr > * {
+
+padding: 6px 20px 6px 20px;
+}
+
+.table_title {
+    text-align: left;
+}
+
+.post_num {
+    text-align: center;
+}
+
+.post_title {
+    text-align: left;
+    width: 200px;
+}
+
+.post_writer {
+    text-align: left;
+}
+
+.post_date {
+    text-align: left;
+    width: 100px;
+}
+
+.post_views {
+    text-align: right;
+}
+
+.post_comment {
+    text-align: right;
+}
+
+.table_color_01  {
+    background-color: #CAC3E2;
+}
+
+.page_button {
+    margin-top: 25px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.btn {
+    float: left;
+    display: block;
+    padding: 11px;
+    width: 24px;
+    text-align: center;
+}
+
+.btn:not(.btn_05) {
+    border-right: 1px solid gray;
+}
