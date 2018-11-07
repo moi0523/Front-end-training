@@ -72,7 +72,38 @@ padding: 6px 20px 6px 20px;
     background-color: #CAC3E2;
 }
 
-.page_button {
+#post {    
+    position: absolute;
+    margin: auto;
+    max-width: 1000px;
+    max-height: 700px;
+    width: 100%;
+    height: 100%;
+    background-color: #e5f0ff;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+}
+
+#post_exit {
+    width: 50px;
+    height: 50px;
+    background-color: #002fff;
+    float: right;
+    margin: -20px;
+}
+
+#post_top {
+    
+}
+
+#post_content {
+
+}
+
+#page_button {
     margin-top: 25px;
     border: 1px solid gray;
     border-radius: 5px;

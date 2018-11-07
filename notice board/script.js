@@ -1,3 +1,16 @@
+let post;
+let exit_btn;
+let title_btn;
+
+post = document.getElementById("post");
+
+exit_btn = document.getElementById("post_exit");
+exit_btn.onclick = function() {
+    console.log('hi');
+    post.style.display = "none";
+};
+
+
 function func (nn) {
     
     for (let i=15*nn+1; i<15*(nn+1)+1; i++) {
@@ -25,6 +38,7 @@ function func (nn) {
         td_title.appendChild(title_);
         title_id.appendChild(td_title);
         td_title.classList.add("post_title");
+        td_title.id = "post_btn"+i;
 
         let td_writer = document.createElement("td");
         let writer_ = document.createTextNode(dataArr[j].writer);
@@ -46,7 +60,6 @@ function func (nn) {
         td_views.appendChild(views_);
         views_id.appendChild(td_views);
         td_views.classList.add("post_views");
-
         
         let td_comment = document.createElement("td");
         let comment_ = document.createTextNode("0");
@@ -54,5 +67,11 @@ function func (nn) {
         td_comment.appendChild(comment_);
         comment_id.appendChild(td_comment);
         td_comment.classList.add("post_comment");
+
+
+        title_btn = document.querySelector("#post_btn"+i);
+        title_btn.onclick = function() {
+            post.style.display = "inline";
+        }
     }
 };
