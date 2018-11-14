@@ -8,22 +8,30 @@ exit_btn = document.getElementById("post_exit");
 exit_btn.onclick = function() {
     console.log('hi');
     post.style.display = "none";
-};
+}
 
 
-function func (nn) {
-    
+function remove() {
+    for (let i=1; i<16; i++) {
+        let cell = document.getElementById("line_" + i);
+        let cell_length = document.getElementById("line_" + i).cells.length;
+        for (let i=0; i<cell_length; i++) {
+            cell.deleteCell(0);
+        }
+    }
+}
+
+
+function func(nn) {
     for (let i=15*nn+1; i<15*(nn+1)+1; i++) {
         let val = 15;
         let j = i-1;
         console.log(i);
-
         
         let n = i%val;
         if (i%15 == 0) {
             n = i/i+14;
         }
-        
 
         let td_num = document.createElement("td");
         let num_ = document.createTextNode(dataArr[j].num);
@@ -71,7 +79,9 @@ function func (nn) {
 
         title_btn = document.querySelector("#post_btn"+i);
         title_btn.onclick = function() {
-            post.style.display = "inline";
+            post.style.display = "  ";
         }
     }
 };
+
+func(0);

@@ -39,17 +39,25 @@
             </div>
             <div id="page_button">
                 <ul class="">
-                    <li class="btn_01 btn" onclick="func(0);">1</li>
-                    <li class="btn_02 btn" onclick="func(1);">2</li>
-                    <li class="btn_03 btn" onclick="func(2);">3</li>
-                    <li class="btn_04 btn" onclick="func(3);">4</li>
-                    <li class="btn_05 btn" onclick="func(4);">5</li>
+                    <li class="btn_01 btn" onclick="remove();func(0);">1</li>
+                    <li class="btn_02 btn" onclick="remove();func(1);">2</li>
+                    <li class="btn_03 btn" onclick="remove();func(2);">3</li>
+                    <li class="btn_04 btn" onclick="remove();func(3);">4</li>
+                    <li class="btn_05 btn" onclick="remove();func(4);">5</li>
                 </ul>
             </div>
         </div>
         <div id="post">
             <div id="post_exit"></div>
-            <div id="post_top"></div>
+            <div id="post_top">
+                <div id="L_top">
+                    <div id="post_top_title"></div>
+                </div>
+                <div id="R_top">
+                    <div id="post_top_writer"></div>
+                    <div id="post_top_date"></div>
+                </div>
+            </div>
             <div id="post_content"></div>
         </div>
         <script src="./data.js"></script>
