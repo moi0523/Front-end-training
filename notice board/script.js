@@ -1,12 +1,15 @@
 let post;
 let exit_btn;
 let title_btn;
+let title_text;
+let writer_text;
+let date_text;
+let content_text
+
 
 post = document.getElementById("post");
-
 exit_btn = document.getElementById("post_exit");
 exit_btn.onclick = function() {
-    console.log('hi');
     post.style.display = "none";
 }
 
@@ -25,10 +28,9 @@ function remove() {
 function func(nn) {
     for (let i=15*nn+1; i<15*(nn+1)+1; i++) {
         let val = 15;
-        let j = i-1;
-        console.log(i);
-        
+        let j = i;
         let n = i%val;
+        
         if (i%15 == 0) {
             n = i/i+14;
         }
@@ -77,11 +79,20 @@ function func(nn) {
         td_comment.classList.add("post_comment");
 
 
-        title_btn = document.querySelector("#post_btn"+i);
+        title_btn = document.getElementById("post_btn"+i);
+        title_text = document.getElementById("post_top_title")
+        writer_text = document.getElementById("post_top_writer");
+        date_text = document.getElementById("post_top_date");
+        content_text = document.getElementById("content_frame");
+
         title_btn.onclick = function() {
-            post.style.display = "  ";
+            post.style.display = "inline";
+            title_text.innerHTML = dataArr[i].title;
+            writer_text.innerHTML = dataArr[i].writer;
+            date_text.innerHTML = dataArr[i].date;
+            content_text.innerHTML = dataArr[i].content;
         }
     }
-};
+}
 
 func(0);

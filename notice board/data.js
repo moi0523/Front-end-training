@@ -1,27 +1,24 @@
 let dataArr = [99];
-
-let rand;
 let randViews;
 let titleText = [];
+let page_content = [];
 
 
-for(n=0; n<75; n++) {
-    titleText[n] = n+1 + "번째 게시글";
-    console.log(titleText[n]);
+for(n=1; n<76; n++) {
+    titleText[n] = n + "번째 게시글";
+    page_content[n] = "content " + n;
 }
 
-
-
-for (let i=0; i<75; i++) {
-    rand = Math.floor(Math.random() * 14);
+for (let i=1; i<76; i++) {
     randViews = Math.floor(Math.random() * 999);
     
     dataArr[i] = {
-        num : i+1,
+        num : i,
         title : titleText[i],
         writer : "admin",
         date : "2018-10-26",
         views : randViews,
         comment : {},
+        content : page_content[i],
     }
 }
